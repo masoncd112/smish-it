@@ -2,55 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Smish-It | Your Anti-Phishing Solution</title>
+  <title>Smish-It | Real-Time SMS Phishing Protection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    header, footer { background: #212121; color: white; padding: 1.5rem; text-align: center; }
-    section { padding: 2rem; max-width: 960px; margin: auto; }
-    .team { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
-    .card { background: white; border-radius: 12px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 220px; text-align: center; }
-    .card img { width: 100px; border-radius: 50%; margin-bottom: 1rem; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
+    header, footer { background: #2c3e50; color: white; padding: 2rem; text-align: center; }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    h1, h2 { margin-top: 0; }
+    .team { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1.5rem; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 220px;
+      text-align: center;
+    }
+    .card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
     a { color: #0077b5; text-decoration: none; }
-    .wireframe img { width: 100%; max-width: 700px; display: block; margin: auto; border-radius: 10px; }
+    .wireframe {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .wire-box {
+      border: 2px dashed #ccc;
+      padding: 1rem;
+      margin: 1rem auto;
+      text-align: center;
+      border-radius: 8px;
+      width: 90%;
+    }
+    .arrow { text-align: center; font-size: 1.5rem; margin: 0.5rem; }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Smish-It</h1>
-    <p>Protecting Seniors from Phishing and Spam</p>
+    <p>Real-Time SMS Phishing Protection</p>
   </header>
 
   <section>
     <h2>About Our Business</h2>
-    <p>Smish-It is a security-focused solution helping the elderly stay safe from SMS phishing, robocalls, and email scams. We make digital communication safer through intelligent filtering, education, and support tools.</p>
+    <p>Smish-it protects users from SMS phishing by checking links in text messages against trusted threat databases in real time. It’s designed for anyone—from seniors to tech professionals—who wants quick, reliable feedback on suspicious messages. By automating link analysis, Smish-it reduces stress, prevents scams, and keeps personal information safe.</p>
   </section>
 
   <section>
-    <h2>Meet the Team</h2>
+    <h2>Meet the Founders</h2>
     <div class="team">
       <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Team member">
+        <img src="https://via.placeholder.com/90" alt="Mason">
         <h3>Mason Coler-Dark</h3>
-        <p>Founder & CEO</p>
         <a href="www.linkedin.com/in/mason-coler-dark-4577b9257" target="_blank">LinkedIn</a>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Team member">
-        <h3>Jane Smith</h3>
-        <p>Operations Lead</p>
-        <a href="https://linkedin.com/in/teammember" target="_blank">LinkedIn</a>
+        <img src="https://via.placeholder.com/90" alt="Isabel">
+        <h3>Isabel Jacobs</h3>
+        <a href="https://www.linkedin.com/in/isabel-jacobs115/" target="_blank">LinkedIn</a>
       </div>
-      <!-- Add more cards as needed -->
+      <div class="card">
+        <img src="https://via.placeholder.com/90" alt="Tatum">
+        <h3>Tatum Jones</h3>
+        <a href="https://www.linkedin.com/in/tatum-jones-3735a9248/" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </section>
 
   <section class="wireframe">
     <h2>How It Works</h2>
-    <p>Our process includes threat detection, alerting, and education to help users avoid scams.</p>
-    <!-- Replace the image link below with your actual wireframe image link -->
-    <img src="https://via.placeholder.com/700x400?text=Wireframe+Diagram" alt="Wireframe of the app">
+    <div class="wire-box">📱 User receives a suspicious text message</div>
+    <div class="arrow">⬇️</div>
+    <div class="wire-box">🔗 Smish-It scans the link in real-time</div>
+    <div class="arrow">⬇️</div>
+    <div class="wire-box">🧠 Compares it with threat intelligence databases</div>
+    <div class="arrow">⬇️</div>
+    <div class="wire-box">✅ User gets a safe/unsafe verdict immediately</div>
   </section>
 
   <footer>
