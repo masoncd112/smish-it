@@ -6,9 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
-    header, footer { background: #1a237e; color: white; padding: 2rem; text-align: center; }
-    header .logo-title { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    header img { height: 60px; }
+    header {
+      background: #1a237e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo-title { display: flex; align-items: center; gap: 1rem; }
+    header img { height: 50px; }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     section { padding: 2rem; max-width: 1000px; margin: auto; }
     h1, h2 { margin-top: 0; }
     .team { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1.5rem; }
@@ -87,14 +106,20 @@
         <p>Your SMS Shield</p>
       </div>
     </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#founders">Founders</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
+  <section id="about">
     <h2>About Our Business</h2>
     <p>Smish-it protects users from SMS phishing by checking links in text messages against trusted threat databases in real time. It’s designed for anyone—from seniors to tech professionals—who wants quick, reliable feedback on suspicious messages. By automating link analysis, Smish-it reduces stress, prevents scams, and keeps personal information safe.</p>
   </section>
 
-  <section>
+  <section id="founders">
     <h2>Meet the Founders</h2>
     <div class="team">
       <div class="card">
@@ -115,7 +140,7 @@
     </div>
   </section>
 
-  <section class="wireframe">
+  <section id="how-it-works" class="wireframe">
     <h2>How It Works</h2>
     <div class="wire-box">📱 User receives a suspicious text message</div>
     <div class="arrow">⬇️</div>
@@ -126,7 +151,7 @@
     <div class="wire-box">✅ User gets a safe/unsafe verdict immediately</div>
   </section>
 
-  <section class="contact-form">
+  <section id="contact" class="contact-form">
     <h2>Contact Us</h2>
     <p>If you're a sponsor, partner, or just want to connect, please reach out below:</p>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -147,4 +172,3 @@
 
 </body>
 </html>
-
