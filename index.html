@@ -7,6 +7,8 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
     header, footer { background: #1a237e; color: white; padding: 2rem; text-align: center; }
+    header .logo-title { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    header img { height: 60px; }
     section { padding: 2rem; max-width: 1000px; margin: auto; }
     h1, h2 { margin-top: 0; }
     .team { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1.5rem; }
@@ -78,8 +80,13 @@
 <body>
 
   <header>
-    <h1>Smish-It</h1>
-    <p>Your SMS Shield</p>
+    <div class="logo-title">
+      <img src="logo.png" alt="Smish-It logo">
+      <div>
+        <h1>Smish-It</h1>
+        <p>Your SMS Shield</p>
+      </div>
+    </div>
   </header>
 
   <section>
@@ -140,3 +147,4 @@
 
 </body>
 </html>
+
