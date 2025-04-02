@@ -1,317 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Smish-It | Your SMS Shield</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-<style>
-html {
-scroll-behavior: smooth;
-}
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-background: #f4f6f8;
-color: #333;
-}
-header {
-background: #1a237e;
-color: white;
-padding: 1rem 2rem;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-position: sticky;
-top: 0;
-z-index: 1000;
-}
-.logo-title {
-display: flex;
-align-items: center;
-gap: 1rem;
-flex-wrap: wrap;
-}
-.logo-title img {
-height: 100px;
-}
-.logo-title h1 {
-margin: 0;
-font-size: 2.5rem;
-font-weight: bold;
-}
-.logo-title p {
-margin: 0;
-font-size: 1rem;
-}
-nav {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-margin-top: 1rem;
-}
-nav a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-position: relative;
-}
-nav a:hover {
-text-decoration: underline;
-}
-section {
-padding: 2rem;
-max-width: 1200px;
-margin: auto;
-}
+  <meta charset="UTF-8" />
+  <title>Smish-It | Your SMS Shield</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #1a237e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .logo-title img {
+      height: 100px;
+    }
+    .logo-title h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .logo-title p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-```
-.team {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 1rem;
-  width: 220px;
-  text-align: center;
-}
-.card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
-}
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 220px;
+      text-align: center;
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
 
-.how-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.how-item {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background: white;
-  cursor: pointer;
-}
-.how-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-.how-item:hover img {
-  transform: scale(1.05);
-}
-.overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.how-item:hover .overlay {
-  opacity: 1;
-}
-.how-text {
-  padding: 1rem;
-}
-.how-text h3 {
-  margin: 0.5rem 0;
-}
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .how-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: white;
+      cursor: pointer;
+    }
+    .how-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .how-item:hover img {
+      transform: scale(1.05);
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .how-item:hover .overlay {
+      opacity: 1;
+    }
+    .how-text {
+      padding: 1rem;
+    }
+    .how-text h3 {
+      margin: 0.5rem 0;
+    }
 
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-.modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  width: 90%;
-  position: relative;
-}
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 2rem;
-  color: #333;
-  cursor: pointer;
-}
-
-```
-
-</style>
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 2rem;
+      color: #333;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-<header>
-<div class="logo-title">
-<img src="logo.png" alt="Smish-It logo" />
-<div>
-<h1>Smish-it</h1>
-<p>Your SMS Shield</p>
-</div>
-</div>
-<nav>
-<a href="#about">About</a>
-<a href="#how-it-works">How It Works</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+  <header>
+    <div class="logo-title">
+      <img src="logo.png" alt="Smish-It logo" />
+      <div>
+        <h1>Smish-it</h1>
+        <p>Your SMS Shield</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section id="about">
-<h2>About Our Business</h2>
-<p>Smish-it protects users from SMS phishing by checking links in text messages against trusted threat databases in real time. It’s designed for anyone—from seniors to tech professionals—who wants quick, reliable feedback on suspicious messages. By automating link analysis, Smish-it reduces stress, prevents scams, and keeps personal information safe.</p>
-</section>
+  <section id="about">
+    <h2>About Our Business</h2>
+    <p>Smish-it protects users from SMS phishing by checking links in text messages against trusted threat databases in real time. It’s designed for anyone—from seniors to tech professionals—who wants quick, reliable feedback on suspicious messages. By automating link analysis, Smish-it reduces stress, prevents scams, and keeps personal information safe.</p>
+  </section>
 
-<section id="founders">
-<h2>Meet the Founders</h2>
-<div class="team">
-<div class="card">
-<img src="mason-profile.png" alt="Mason Coler-Dark" />
-<h3>Mason Coler-Dark</h3>
-<a href="https://www.linkedin.com/in/mason-coler-dark-4577b9257/" target="_blank">
-<img src="linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; border-radius: 50%;" />
-</a>
-</div>
-<div class="card">
-<img src="Isabel.jpg" alt="Isabel Jacobs" />
-<h3>Isabel Jacobs</h3>
-<a href="https://www.linkedin.com/in/isabel-jacobs115/" target="_blank">
-<img src="linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; border-radius: 50%;" />
-</a>
-</div>
-<div class="card">
-<img src="Tatum.png" alt="Tatum Jones" />
-<h3>Tatum Jones</h3>
-<a href="https://www.linkedin.com/in/tatum-jones-3735a9248/" target="_blank">
-<img src="linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; border-radius: 50%;" />
-</a>
-</div>
-</div>
-</section>
+  <section id="founders">
+    <h2>Meet the Founders</h2>
+    <div class="team">
+      <div class="card">
+        <img src="mason-profile.png" alt="Mason Coler-Dark" />
+        <h3>Mason Coler-Dark</h3>
+        <a href="https://www.linkedin.com/in/mason-coler-dark-4577b9257/" target="_blank">
+          <img src="linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; border-radius: 50%;" />
+        </a>
+      </div>
+      <div class="card">
+        <img src="Isabel.jpg" alt="Isabel Jacobs" />
+        <h3>Isabel Jacobs</h3>
+        <a href="https://www.linkedin.com/in/isabel-jacobs115/" target="_blank">
+          <img src="linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; border-radius: 50%;" />
+        </a>
+      </div>
+      <div class="card">
+        <img src="Tatum.png" alt="Tatum Jones" />
+        <h3>Tatum Jones</h3>
+        <a href="https://www.linkedin.com/in/tatum-jones-3735a9248/" target="_blank">
+          <img src="linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; border-radius: 50%;" />
+        </a>
+      </div>
+    </div>
+  </section>
 
-<section id="how-it-works">
-<h2>How It Works</h2>
-<div class="how-grid">
-<div class="how-item" onclick="openModal(1)">
-<img src="mason-profile.png" alt="Step 1" />
-<div class="overlay">+</div>
-<div class="how-text">
-<h3>Step 1: Suspicious Message</h3>
-<p>User receives a strange or unrecognized text with a link.</p>
-</div>
-</div>
-<div class="how-item" onclick="openModal(2)">
-<img src="logo.png" alt="Step 2" />
-<div class="overlay">+</div>
-<div class="how-text">
-<h3>Step 2: Smish-It Scans</h3>
-<p>The link is analyzed in real-time for known threats and phishing patterns.</p>
-</div>
-</div>
-<div class="how-item" onclick="openModal(3)">
-<img src="nsf.png" alt="Step 3" />
-<div class="overlay">+</div>
-<div class="how-text">
-<h3>Step 3: Safe or Unsafe Verdict</h3>
-<p>Smish-It instantly provides the user a result — safe to click or not.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Modal -->
-<div id="modal" class="modal">
-<div class="modal-content" id="modal-content">
-<span class="modal-close" onclick="closeModal()">×</span>
-</div>
-</div>
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="how-grid">
+      <div class="how-item" onclick="openModal(1)">
+        <img src="mason-profile.png" alt="Step 1" />
+        <div class="overlay">+</div>
+        <div class="how-text">
+          <h3>Step 1: Suspicious Message</h3>
+          <p>User receives a strange or unrecognized text with a link.</p>
+        </div>
+      </div>
+      <div class="how-item" onclick="openModal(2)">
+        <img src="logo.png" alt="Step 2" />
+        <div class="overlay">+</div>
+        <div class="how-text">
+          <h3>Step 2: Smish-It Scans</h3>
+          <p>The link is analyzed in real-time for known threats and phishing patterns.</p>
+        </div>
+      </div>
+      <div class="how-item" onclick="openModal(3)">
+        <img src="nsf.png" alt="Step 3" />
+        <div class="overlay">+</div>
+        <div class="how-text">
+          <h3>Step 3: Safe or Unsafe Verdict</h3>
+          <p>Smish-It instantly provides the user a result — safe to click or not.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Contact -->
-<section id="contact" class="contact-form">
-<h2>Contact Us</h2>
-<p>If you're a sponsor, partner, or just want to connect, please reach out below:</p>
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: auto;">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-<button type="submit" style="padding: 0.75rem; background-color: #1a237e; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Send Message</button>
-</form>
-</section>
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content" id="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+    </div>
+  </div>
 
-<!-- Footer -->
-<footer style="background: #f4f6f8; text-align: center; padding: 2rem;">
-<div class="supporters">
-<p>© 2025 Smish-It. Patent pending.</p>
-<p>Supported by:</p>
-<a href="https://www.nsf.gov/funding/initiatives/i-corps/about-i-corps" target="_blank">
-<img src="nsf.png" alt="NSF I-Corps" style="width: 48px; height: 48px; border-radius: 50%; margin: 0 10px;">
-</a>
-<a href="https://www.boisestate.edu/venturecollege/" target="_blank">
-<img src="venture-college.png" alt="Venture College" style="width: 48px; height: 48px; border-radius: 50%; margin: 0 10px;">
-</a>
-</div>
-</footer>
+  <!-- Contact -->
+  <section id="contact" class="contact-form">
+    <h2>Contact Us</h2>
+    <p>If you're a sponsor, partner, or just want to connect, please reach out below:</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: auto;">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" style="padding: 0.75rem; background-color: #1a237e; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Send Message</button>
+    </form>
+  </section>
 
-<!-- Modal Logic -->
-<script>
-function openModal(step) {
-const modal = document.getElementById('modal');
-const content = document.getElementById('modal-content');
+  <!-- Footer -->
+  <footer style="background: #f4f6f8; text-align: center; padding: 2rem;">
+    <div class="supporters">
+      <p>&copy; 2025 Smish-It. Patent pending.</p>
+      <p>Supported by:</p>
+      <a href="https://www.nsf.gov/funding/initiatives/i-corps/about-i-corps" target="_blank">
+        <img src="nsf.png" alt="NSF I-Corps" style="width: 48px; height: 48px; border-radius: 50%; margin: 0 10px;">
+      </a>
+      <a href="https://www.boisestate.edu/venturecollege/" target="_blank">
+        <img src="venture-college.png" alt="Venture College" style="width: 48px; height: 48px; border-radius: 50%; margin: 0 10px;">
+      </a>
+    </div>
+  </footer>
 
-```
-  let html = `<span class="modal-close" onclick="closeModal()">&times;</span>`;
-  if (step === 1) {
-    html += `<h2>Step 1: Suspicious Message</h2><p>These are just a few we personally received. These are real texts. Here's how we help.</p><img src="scams.png" alt="Scam examples" style="width:100%; margin-top:1rem;">`;
-  } else if (step === 2) {
-    html += `<h2>Step 2: Smish-It Scans</h2><p>Smish-It instantly analyzes the link against multiple threat databases using real-time scanning tools.</p>`;
-  } else if (step === 3) {
-    html += `<h2>Step 3: Verdict</h2><p>After scanning, Smish-It tells you if the link is safe to click or potentially dangerous — no guessing needed.</p>`;
-  }
+  <!-- Modal Logic -->
+  <script>
+    function openModal(step) {
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modal-content');
 
-  content.innerHTML = html;
-  modal.style.display = 'flex';
-}
+      let html = `<span class="modal-close" onclick="closeModal()">&times;</span>`;
+      if (step === 1) {
+        html += `<h2>Step 1: Suspicious Message</h2><p>These are just a few we personally received. These are real texts. Here's how we help.</p><img src="scams.png" alt="Scam examples" style="width:100%; margin-top:1rem;">`;
+      } else if (step === 2) {
+        html += `<h2>Step 2: Smish-It Scans</h2><p>Smish-It instantly analyzes the link against multiple threat databases using real-time scanning tools.</p>`;
+      } else if (step === 3) {
+        html += `<h2>Step 3: Verdict</h2><p>After scanning, Smish-It tells you if the link is safe to click or potentially dangerous — no guessing needed.</p>`;
+      }
 
-function closeModal() {
-  document.getElementById('modal').style.display = 'none';
-}
+      content.innerHTML = html;
+      modal.style.display = 'flex';
+    }
 
-window.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    closeModal();
-  }
-});
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
 
-```
-
-</script>
-  
+    window.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
