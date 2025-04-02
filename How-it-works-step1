@@ -117,13 +117,26 @@
     </div>
   </section>
 
-  <div id="modal">
+ <div id="modal">
+  <div class="modal-content">
     <span class="modal-close" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      <h2>Step 2: Smish-It Scans the Link</h2>
-      <p>We use real-time scanning tools and threat databases to analyze the link's safety and legitimacy.</p>
-    </div>
+    <h2>Step 2: Smish-It Scans the Link</h2>
+    <p>We use real-time scanning tools and threat databases to analyze the link's safety and legitimacy.</p>
   </div>
+</div>
+
+.modal-content {
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 1001;
+}
 
   <script>
     function openModal() {
