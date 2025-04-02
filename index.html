@@ -23,10 +23,10 @@
       z-index: 1000;
     }
     .logo-title { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-    .logo-title img { height: 80px; }
+    .logo-title img { height: 100px; }
     .logo-title h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: bold;
     }
     .logo-title p {
@@ -70,28 +70,13 @@
       text-align: center;
     }
     .card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
-}
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
     a { color: #0077b5; text-decoration: none; }
-    .wireframe {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .wire-box {
-      border: 2px dashed #ccc;
-      padding: 1rem;
-      margin: 1rem auto;
-      text-align: center;
-      border-radius: 8px;
-      width: 90%;
-    }
-    .arrow { text-align: center; font-size: 1.5rem; margin: 0.5rem; }
     .contact-form {
       background: white;
       padding: 2rem;
@@ -131,6 +116,12 @@
       color: #000;
       text-decoration: underline;
     }
+    .supporters img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -143,32 +134,8 @@
       }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll("section[id]");
-      const navLinks = document.querySelectorAll("nav a");
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            navLinks.forEach(link => {
-              link.classList.remove("active");
-              if (link.getAttribute("href").slice(1) === entry.target.id) {
-                link.classList.add("active");
-              }
-            });
-          }
-        });
-      }, { threshold: 0.6 });
-
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    });
-  </script>
 </head>
 <body>
-
   <header>
     <div class="logo-title">
       <img src="logo.png" alt="Smish-It logo">
@@ -180,7 +147,7 @@
     <nav>
       <a href="#about">About</a>
       <a href="#founders">Founders</a>
-     <a href="how-it-works-step1.html">How It Works</a>
+      <a href="how-it-works-step1.html">How It Works</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -211,31 +178,6 @@
     </div>
   </section>
 
- <section id="how-it-works" class="wireframe">
-  <h2>How It Works</h2>
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-    <div style="display: flex; align-items: center; gap: 1rem; max-width: 700px; background: #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-      <span style="font-size: 2rem;">📱</span>
-      <p style="margin: 0; font-weight: bold;">User receives a suspicious text message</p>
-    </div>
-
-    <div style="display: flex; align-items: center; gap: 1rem; max-width: 700px; background: #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-      <span style="font-size: 2rem;">🔗</span>
-      <p style="margin: 0; font-weight: bold;">Smish-It scans the link in real-time</p>
-    </div>
-
-    <div style="display: flex; align-items: center; gap: 1rem; max-width: 700px; background: #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-      <span style="font-size: 2rem;">🧠</span>
-      <p style="margin: 0; font-weight: bold;">Compares it with threat intelligence databases</p>
-    </div>
-
-    <div style="display: flex; align-items: center; gap: 1rem; max-width: 700px; background: #ffffff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-      <span style="font-size: 2rem;">✅</span>
-      <p style="margin: 0; font-weight: bold;">User gets a safe/unsafe verdict immediately</p>
-    </div>
-  </div>
-</section>
-
   <section id="contact" class="contact-form">
     <h2>Contact Us</h2>
     <p>If you're a sponsor, partner, or just want to connect, please reach out below:</p>
@@ -248,18 +190,18 @@
   </section>
 
   <footer>
-  <div class="supporters">
-    <p>&copy; 2025 Smish-It. Patent pending.</p>
-    <p>Supported by:</p>
-    <a href="https://www.nsf.gov/funding/initiatives/i-corps/about-i-corps" target="_blank">
-      <img src="nsf.png" alt="NSF I-Corps" style="width:32px; height:32px; border-radius:50%; margin: 0 8px;">
-    </a>
-    <a href="https://www.boisestate.edu/venturecollege/" target="_blank">
-      <img src="venture-college.png" alt="Venture College" style="width:32px; height:32px; border-radius:50%; margin: 0 8px;">
-    </a>
-  </div>
-</footer>
-
+    <div class="supporters">
+      <p>&copy; 2025 Smish-It. Patent pending.</p>
+      <p>Supported by:</p>
+      <a href="https://www.nsf.gov/funding/initiatives/i-corps/about-i-corps" target="_blank">
+        <img src="nsf.png" alt="NSF I-Corps">
+      </a>
+      <a href="https://www.boisestate.edu/venturecollege/" target="_blank">
+        <img src="venture-college.png" alt="Venture College">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
+
 
